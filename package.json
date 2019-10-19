@@ -1,0 +1,12 @@
+{
+  "name": "projet",
+  "version": "0.1.0",
+  "description": "Projet Bot Discord Gdoc",
+  "main": "main.js",
+  "repository": "https://github.com/Lyceos/botdiscord.git",
+  "author": "alex <alex110745@hotmail.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "discordjs/discord.js"
+  }
+}
