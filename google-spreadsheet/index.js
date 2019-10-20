@@ -1,4 +1,4 @@
-var async = require("./async");
+var async = require("async");
 var request = require("request");
 var xml2js = require("xml2js");
 var http = require("http");
