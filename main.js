@@ -18,7 +18,7 @@ client.on("message", msg => {
 
 client.login(process.env.TOKEN);
 
-const GoogleSpreadsheet = require("google-spreadsheet");
+const GoogleSpreadsheet = require("./google-spreadsheet");
 const { promisify } = require("util");
 const creds = require("./Client_secret.json");
 var student;
