@@ -3,7 +3,7 @@ const { Client } = require("discord.js");
 const client = new Client({disableEveryone: true });
 // const Discord = require('discord.js');
 // const client = new Discord.Client();
-const { TOKEN, PREFIX, KEY } = require("./config");
+// const { TOKEN, PREFIX, KEY } = require("./config");
 
 // const TOKEN = process.env.TOKEN
 // const PREFIX = process.env.PREFIX
@@ -13,10 +13,10 @@ client.on("ready", () => {
 });
 
 client.on("message", msg => {
-	if (msg.content.startsWith(`${PREFIX}ping`)) msg.reply("Pong!");
+	if (msg.content.startsWith(`${process.env.PREFIX}ping`)) msg.reply("Pong!");
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
 
 const GoogleSpreadsheet = require("google-spreadsheet");
 const { promisify } = require("util");
@@ -27,7 +27,7 @@ function printPlayerInfos(student) { // relever les mots dans la colonne Pseudo 
 }
 async function accessSpreadsheet() {
 	// const doc = new GoogleSpreadsheet(process.env.GOOGLE_TOKEN);
-	const doc = new GoogleSpreadsheet(KEY);
+	const doc = new GoogleSpreadsheet(process.env.KEY);
 
 	await promisify(doc.useServiceAccountAuth)(creds);
 	const info = await promisify(doc.getInfo)();
@@ -45,7 +45,7 @@ async function accessSpreadsheet() {
 	});
 
     client.on('message', message=>{
-        let args = message.content.substring(PREFIX.length).split(" ");
+        let args = message.content.substring(process.env.PREFIX.length).split(" ");
         //le premier mot apres le prefix sera arg 0
         switch(args[0]){
             case 'data':
