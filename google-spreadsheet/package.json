@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/google-spreadsheet/-/google-spreadsheet-2.0.8.tgz",
   "_shasum": "4c52c13bec439010010d9123ebc3cd06f43a51c0",
   "_spec": "google-spreadsheet",
-  "_where": "C:\\Users\\Alex\\Desktop\\Discord Bot\\google-sheets-node",
+  "_where": "./google-spreadsheet",
   "author": {
     "name": "Theo Ephraim",
     "email": "theozero@gmail.com",
